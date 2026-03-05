@@ -8,7 +8,7 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      top: false, // 👈 we manually handle status bar in app bar
+      top: false,
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
@@ -19,7 +19,7 @@ class HomeTab extends StatelessWidget {
             BrandListPage(),
             SizedBox(height: 16),
             RecommendedForYou(),
-            SizedBox(height: 24), // bottom breathing space
+            SizedBox(height: 24),
           ],
         ),
       ),
@@ -37,7 +37,7 @@ class _HomeAppBar extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.fromLTRB(
         16,
-        statusBarHeight + 8, // 👈 below notification bar
+        statusBarHeight + 8,
         16,
         0,
       ),

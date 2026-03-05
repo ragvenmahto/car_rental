@@ -5,7 +5,7 @@ import '../models/car_model.dart';
 
 class CarService {
 
-  // 🔹 Brand → API slug
+  // brand -> api slug brand
   String _mapBrandToSlug(String brand) {
     switch (brand.toLowerCase()) {
       case 'bmw':
@@ -17,11 +17,11 @@ class CarService {
     }
   }
 
-  // 🔹 FETCH ALL CARS (NEW)
+  // fetch all cars
   Future<List<Car>> fetchAllCars() async {
     const url = 'https://horizontal-scrollbar-4.onrender.com/all';
 
-    debugPrint('🔥 CAR API URL: $url');
+    debugPrint('CAR API URL: $url');
 
     final response = await http.get(Uri.parse(url));
 
@@ -33,12 +33,14 @@ class CarService {
     }
   }
 
-  // 🔹 FETCH BY BRAND
+  // fetch by brand
   Future<List<Car>> fetchCarsByBrand(String brandName) async {
+
     final slug = _mapBrandToSlug(brandName);
+
     final url = 'https://horizontal-scrollbar-4.onrender.com/$slug';
 
-    debugPrint('🔥 CAR API URL: $url');
+    debugPrint('CAR API URL: $url');
 
     final response = await http.get(Uri.parse(url));
 

@@ -28,13 +28,13 @@ class LoginViewModel extends ChangeNotifier {
     debugPrint("PASSWORD: ${passwordController.text}");
 
     try {
-      // ✅ get token from API
+      // get token from API
       final token = await _authService.login(
         username: usernameController.text.trim(),
         password: passwordController.text.trim(),
       );
 
-      // ✅ save token securely
+      // save token securely
       await _storageService.saveToken(token);
 
       debugPrint("TOKEN SAVED SECURELY");

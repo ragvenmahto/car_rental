@@ -44,8 +44,6 @@ class LoginAndRegScreen extends StatelessWidget {
 
               const Spacer(),
 
-
-              // ✅ FIXED LOGIN BUTTON
               SizedBox(
                 width: double.infinity,
                 height: 56,
@@ -98,6 +96,7 @@ class LoginAndRegScreen extends StatelessWidget {
               ),
 
               const SizedBox(height: 30),
+
             ],
           ),
         ),

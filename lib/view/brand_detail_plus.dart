@@ -18,7 +18,6 @@ class BrandDetailPlus extends StatelessWidget {
         title: Text(car.name),
       ),
 
-      // 🔹 BOOK NOW BUTTON AT BOTTOM
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(16),
         child: ElevatedButton(
@@ -40,22 +39,20 @@ class BrandDetailPlus extends StatelessWidget {
                 actions: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pop(context); // Close dialog
+                      Navigator.pop(context);
                     },
                     child: const Text("Cancel"),
                   ),
                   TextButton(
                     onPressed: () {
-                      // 1️⃣ Save booking
+
                       context.read<CarViewModel>().bookCar(car);
 
-                      // 2️⃣ Close dialog
                       Navigator.pop(context);
 
-                      // 3️⃣ Show SnackBar
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text('${car.name} booked successfully 🚗'),
+                          content: Text('${car.name} booked successfully '),
                           duration: const Duration(seconds: 2),
                         ),
                       );
@@ -81,7 +78,7 @@ class BrandDetailPlus extends StatelessWidget {
       ),
 
       body: SingleChildScrollView(
-        padding: const EdgeInsets.only(bottom: 80), // space for button
+        padding: const EdgeInsets.only(bottom: 80),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

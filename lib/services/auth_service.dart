@@ -14,14 +14,13 @@ class AuthService {
       body: jsonEncode({
         "username": username,
         "password": password,
-        "expiresInMins": 30, // optional but good
+        "expiresInMins": 30,
       }),
     );
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
 
-      // ✅ FIX HERE
       return data["accessToken"];
     } else {
       throw Exception("Login failed");

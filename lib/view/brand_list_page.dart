@@ -12,7 +12,7 @@ class BrandListPage extends StatefulWidget {
 }
 
 class _BrandListPageState extends State<BrandListPage> {
-  int selectedIndex = 0; // ✅ DEFINE IT HERE
+  int selectedIndex = 0;
 
   @override
   void initState() {
@@ -45,16 +45,16 @@ class _BrandListPageState extends State<BrandListPage> {
       height: 100,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: vm.brands.length, // ✅ FIX
+        itemCount: vm.brands.length,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         itemBuilder: (context, index) {
-          final brand = vm.brands[index]; // ✅ FIX
+          final brand = vm.brands[index];
           final isSelected = index == selectedIndex;
 
           return GestureDetector(
             onTap: () {
               setState(() {
-                selectedIndex = index; // ✅ UPDATE SELECTION
+                selectedIndex = index;
               });
 
               Navigator.push(context,

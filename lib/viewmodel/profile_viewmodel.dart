@@ -18,7 +18,7 @@ class ProfileViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
-      // 🔑 READ TOKEN FROM STORAGE
+      // reading token from storage
       final token = await _storageService.getToken();
 
       debugPrint('PROFILE TOKEN => $token');

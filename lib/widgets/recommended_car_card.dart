@@ -21,7 +21,6 @@ class RecommendedCarCard extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // 🔹 LEFT IMAGE
           ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: Image.network(
@@ -34,13 +33,12 @@ class RecommendedCarCard extends StatelessWidget {
 
           const SizedBox(width: 12),
 
-          // 🔹 CENTER DETAILS
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Car Name
+
                 Text(
                   car.name,
                   style: const TextStyle(
@@ -52,7 +50,6 @@ class RecommendedCarCard extends StatelessWidget {
 
                 const SizedBox(height: 4),
 
-                // Location
                 Row(
                   children: [
                     const Icon(
@@ -70,7 +67,6 @@ class RecommendedCarCard extends StatelessWidget {
 
                 const SizedBox(height: 6),
 
-                // Rating
                 Row(
                   children: [
                     const Icon(
@@ -88,7 +84,6 @@ class RecommendedCarCard extends StatelessWidget {
 
                 const SizedBox(height: 8),
 
-                // Price / day
                 Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 12,

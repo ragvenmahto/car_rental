@@ -42,8 +42,6 @@ class BookingsTab extends StatelessWidget {
             ),
             title: Text(car.name),
             subtitle: Text('₹${car.pricePerDay} / day • ${car.location}'),
-
-            // 🔴 DELETE WITH CONFIRMATION
             trailing: IconButton(
               icon: const Icon(Icons.delete, color: Colors.red),
               onPressed: () {

@@ -39,7 +39,6 @@ class _ProfileTabState extends State<ProfileTab> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
 
-          // ================= PROFILE HEADER =================
           CircleAvatar(
             radius: 50,
             backgroundImage: NetworkImage(user.image),
@@ -58,7 +57,7 @@ class _ProfileTabState extends State<ProfileTab> {
           ),
           const SizedBox(height: 24),
 
-          // ================= PERSONAL INFO =================
+
           _section(
             title: 'Personal Information',
             children: [
@@ -69,7 +68,6 @@ class _ProfileTabState extends State<ProfileTab> {
             ],
           ),
 
-          // ================= CONTACT INFO =================
           _section(
             title: 'Contact',
             children: [
@@ -78,7 +76,6 @@ class _ProfileTabState extends State<ProfileTab> {
             ],
           ),
 
-          // ================= EDUCATION =================
           _section(
             title: 'Education',
             children: [
@@ -86,7 +83,7 @@ class _ProfileTabState extends State<ProfileTab> {
             ],
           ),
 
-          // ================= ROLE =================
+
           _section(
             title: 'Account',
             children: [
@@ -98,7 +95,7 @@ class _ProfileTabState extends State<ProfileTab> {
     );
   }
 
-  // ================= REUSABLE WIDGETS =================
+
 
   Widget _section({
     required String title,

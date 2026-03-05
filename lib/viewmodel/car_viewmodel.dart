@@ -5,24 +5,24 @@ import '../services/car_service.dart';
 class CarViewModel extends ChangeNotifier {
   final CarService _service = CarService();
 
-  // 🔹 BRAND CARS
+  // car brands
   List<Car> _cars = [];
 
-  // 🔹 RECOMMENDED CARS
+  // recommended cars
   List<Car> _recommendedCars = [];
 
-  // 🔹 BOOKED CARS
+  // booked cars
   final List<Car> _bookedCars = [];
 
   bool _isLoading = false;
 
-  // 🔹 GETTERS
+ // getters
   List<Car> get cars => _cars;
   List<Car> get recommendedCars => _recommendedCars;
   List<Car> get bookedCars => _bookedCars;
   bool get isLoading => _isLoading;
 
-  // 🔹 BRAND LOAD
+  // loading -> car brands
   Future<void> loadCars(String brandName) async {
     _isLoading = true;
     notifyListeners();
@@ -37,7 +37,7 @@ class CarViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  // 🔹 RECOMMENDED LOAD (ONCE)
+  // loading -> recommended cars
   Future<void> loadRecommendedCars() async {
     if ( _recommendedCars.isNotEmpty) return;
 
@@ -54,7 +54,7 @@ class CarViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  // 🔹 BOOK A CAR
+  // book a car
   void bookCar(Car car) {
     final alreadyBooked = _bookedCars.any((c) => c.id == car.id);
     if (alreadyBooked) return;
@@ -63,7 +63,7 @@ class CarViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  // 🔴 REMOVE BOOKED CAR (NEW)
+  // remove booked car
   void removeBookedCar(Car car) {
     _bookedCars.removeWhere((c) => c.id == car.id);
     notifyListeners();

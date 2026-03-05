@@ -17,6 +17,7 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+
         // 🔹 Onboarding flow
         ChangeNotifierProvider(
           create: (_) => OnboardingViewModel(),

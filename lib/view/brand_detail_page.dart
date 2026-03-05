@@ -51,7 +51,6 @@ class _BrandDetailPageState extends State<BrandDetailPage> {
         ),
         itemCount: vm.cars.length,
 
-        // navigate to detail page plus
         itemBuilder: (context, index) {
           final car = vm.cars[index];
 

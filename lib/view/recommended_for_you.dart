@@ -23,13 +23,13 @@ class _RecommendedForYouState extends State<RecommendedForYou> {
 
   @override
   Widget build(BuildContext context) {
-    // ✅ vm MUST be defined here
+
     final vm = context.watch<CarViewModel>();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 🔹 HEADER
+
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(

@@ -13,14 +13,12 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //final vm = context.read<OnboardingViewModel>();
 
     return Scaffold(
       backgroundColor: const Color(0xFF1F1F26),
       body: Stack(
         children: [
 
-          // Background image
           Positioned.fill(
             child: Image.asset(
               "images/first.jpg",
@@ -29,14 +27,12 @@ class OnboardingScreen extends StatelessWidget {
             ),
           ),
 
-          // Dark overlay -> shadow effect
           Positioned.fill(
             child: Container(
               color: Colors.black.withAlpha(90),
             ),
           ),
 
-          // Bottom content
           Positioned(
             left: 24,
             right: 24,

@@ -13,7 +13,6 @@ class LoginScreen extends StatelessWidget {
     return Consumer<LoginViewModel>(
       builder: (context, vm, child) {
 
-        // ✅ LISTEN FOR SUCCESS
         if (vm.loginSuccess) {
           WidgetsBinding.instance.addPostFrameCallback((_) {
             vm.resetLoginState();
@@ -21,7 +20,6 @@ class LoginScreen extends StatelessWidget {
             Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                // if HomeScreen requires BottomNavViewModel, provide it here both comes from provider
                 builder: (_) => ChangeNotifierProvider(
                   create: (_) => BottomNavViewModel(),
                   child: const HomeScreen(),
@@ -41,15 +39,13 @@ class LoginScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 40),
-                  Text(
-                    "Let’s Sign you in.",
+                  Text("Let’s Sign you in.",
                     style: GoogleFonts.roboto(
                       fontSize: 32,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  Text(
-                    "Welcome back,\nYou’ve been missed!",
+                  Text("Welcome back,\nYou’ve been missed!",
                     style: GoogleFonts.roboto(
                       fontSize: 20,
                       fontWeight: FontWeight.w400,
